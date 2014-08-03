@@ -95,15 +95,6 @@ environments {
     }
 }
 
-/******************************************************************************/
-grails.assets.less.compile = 'less4j'
-grails.assets.plugin."twitter-bootstrap".excludes = ["**/*.less"]
-grails.assets.plugin."twitter-bootstrap".includes = ["bootstrap.less"]
-
-grails.plugins.twitterbootstrap.fixtaglib = true
-grails.plugins.twitterbootstrap.defaultBundle = 'bundle_bootstrap'
-/******************************************************************************/
-
 // log4j configuration
 log4j.main = {
     // Example of changing the log pattern for the default console appender:

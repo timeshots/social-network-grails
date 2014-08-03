@@ -7918,3 +7918,579 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 Caused by: java.lang.NullPointerException
 	... 4 more
 >>>>>>> feature/datasource-configuration
+2014-08-03 20:19:18,751 [http-bio-8080-exec-10] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+home_borrero_Documents_Developer_workspace_social_network_grails_grails_app_views_user_index_gsp: 1: unable to resolve class com.timeshots.blacklabel.socialnetworkgrails.User
+ @ line 1, column 1.
+   import com.timeshots.blacklabel.socialnetworkgrails.User
+   ^
+
+1 error
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)
+	at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:938)
+	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:585)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:534)
+	at groovy.lang.GroovyClassLoader.doParseClass(GroovyClassLoader.java:286)
+	at groovy.lang.GroovyClassLoader.parseClass(GroovyClassLoader.java:259)
+	at groovy.lang.GroovyClassLoader.parseClass(GroovyClassLoader.java:245)
+	at groovy.lang.GroovyClassLoader.parseClass(GroovyClassLoader.java:203)
+	at org.codehaus.groovy.grails.web.pages.GroovyPagesTemplateEngine.compileGroovyPage(GroovyPagesTemplateEngine.java:608)
+	at org.codehaus.groovy.grails.web.pages.GroovyPagesTemplateEngine.buildPageMetaInfo(GroovyPagesTemplateEngine.java:560)
+	at org.codehaus.groovy.grails.web.pages.GroovyPagesTemplateEngine.buildPageMetaInfo(GroovyPagesTemplateEngine.java:459)
+	at org.codehaus.groovy.grails.web.pages.GroovyPagesTemplateEngine$1$1.updateValue(GroovyPagesTemplateEngine.java:280)
+	at org.codehaus.groovy.grails.web.pages.GroovyPagesTemplateEngine$1$1.updateValue(GroovyPagesTemplateEngine.java:265)
+	at grails.util.CacheEntry.getValue(CacheEntry.java:141)
+	at grails.util.CacheEntry.getValue(CacheEntry.java:81)
+	at org.codehaus.groovy.grails.web.pages.GroovyPagesTemplateEngine.createTemplate(GroovyPagesTemplateEngine.java:262)
+	at org.codehaus.groovy.grails.web.pages.GroovyPagesTemplateEngine.createTemplate(GroovyPagesTemplateEngine.java:252)
+	at org.codehaus.groovy.grails.web.pages.GroovyPagesTemplateEngine.createTemplate(GroovyPagesTemplateEngine.java:374)
+	at org.codehaus.groovy.grails.web.servlet.view.GroovyPageView.initTemplate(GroovyPageView.java:170)
+	at org.codehaus.groovy.grails.web.servlet.view.GroovyPageView.afterPropertiesSet(GroovyPageView.java:159)
+	at org.codehaus.groovy.grails.web.servlet.view.GroovyPageViewResolver.createGroovyPageView(GroovyPageViewResolver.java:187)
+	at org.codehaus.groovy.grails.web.servlet.view.GroovyPageViewResolver.createGrailsView(GroovyPageViewResolver.java:170)
+	at org.codehaus.groovy.grails.web.servlet.view.GroovyPageViewResolver.loadView(GroovyPageViewResolver.java:96)
+	at org.springframework.web.servlet.view.AbstractCachingViewResolver.createView(AbstractCachingViewResolver.java:244)
+	at org.springframework.web.servlet.view.UrlBasedViewResolver.createView(UrlBasedViewResolver.java:402)
+	at org.springframework.web.servlet.view.AbstractCachingViewResolver.resolveViewName(AbstractCachingViewResolver.java:146)
+	at org.codehaus.groovy.grails.web.servlet.view.GroovyPageViewResolver.resolveViewName(GroovyPageViewResolver.java:85)
+	at org.codehaus.groovy.grails.web.servlet.view.GrailsLayoutViewResolver.resolveViewName(GrailsLayoutViewResolver.java:50)
+	at org.codehaus.groovy.grails.web.util.WebUtils.resolveView(WebUtils.java:170)
+	at org.codehaus.groovy.grails.web.mapping.UrlMappingUtils.resolveView(UrlMappingUtils.java:78)
+	at org.codehaus.groovy.grails.web.mapping.filter.UrlMappingsFilter.renderViewForUrlMappingInfo(UrlMappingsFilter.java:400)
+	at org.codehaus.groovy.grails.web.mapping.filter.UrlMappingsFilter.doFilterInternal(UrlMappingsFilter.java:222)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.codehaus.groovy.grails.web.servlet.mvc.GrailsWebRequestFilter.doFilterInternal(GrailsWebRequestFilter.java:69)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.codehaus.groovy.grails.web.filters.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:67)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:344)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:261)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1040)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:607)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:315)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+2014-08-03 20:19:18,754 [http-bio-8080-exec-10] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+home_borrero_Documents_Developer_workspace_social_network_grails_grails_app_views_user_index_gsp: 1: unable to resolve class com.timeshots.blacklabel.socialnetworkgrails.User
+ @ line 1, column 1.
+   import com.timeshots.blacklabel.socialnetworkgrails.User
+   ^
+
+1 error
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)
+	at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:938)
+	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:585)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:534)
+	at grails.util.CacheEntry.getValue(CacheEntry.java:141)
+	at grails.util.CacheEntry.getValue(CacheEntry.java:81)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+2014-08-03 20:19:18,754 [http-bio-8080-exec-10] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+home_borrero_Documents_Developer_workspace_social_network_grails_grails_app_views_user_index_gsp: 1: unable to resolve class com.timeshots.blacklabel.socialnetworkgrails.User
+ @ line 1, column 1.
+   import com.timeshots.blacklabel.socialnetworkgrails.User
+   ^
+
+1 error
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)
+	at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:938)
+	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:585)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:534)
+	at grails.util.CacheEntry.getValue(CacheEntry.java:141)
+	at grails.util.CacheEntry.getValue(CacheEntry.java:81)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+2014-08-03 20:19:18,755 [http-bio-8080-exec-10] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+home_borrero_Documents_Developer_workspace_social_network_grails_grails_app_views_user_index_gsp: 1: unable to resolve class com.timeshots.blacklabel.socialnetworkgrails.User
+ @ line 1, column 1.
+   import com.timeshots.blacklabel.socialnetworkgrails.User
+   ^
+
+1 error
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)
+	at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:938)
+	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:585)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:534)
+	at grails.util.CacheEntry.getValue(CacheEntry.java:141)
+	at grails.util.CacheEntry.getValue(CacheEntry.java:81)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+2014-08-03 20:19:18,858 [http-bio-8080-exec-10] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.web.mapping.exceptions.UrlMappingException: Error mapping onto view [user/index]: Could not parse script [/home/borrero/Documents/Developer/workspace/social-network-grails/grails-app/views/user/index.gsp]: startup failed:
+home_borrero_Documents_Developer_workspace_social_network_grails_grails_app_views_user_index_gsp: 1: unable to resolve class com.timeshots.blacklabel.socialnetworkgrails.User
+ @ line 1, column 1.
+   import com.timeshots.blacklabel.socialnetworkgrails.User
+   ^
+
+1 error
+
+	at org.codehaus.groovy.grails.web.mapping.filter.UrlMappingsFilter.renderViewForUrlMappingInfo(UrlMappingsFilter.java:420)
+	at org.codehaus.groovy.grails.web.mapping.filter.UrlMappingsFilter.doFilterInternal(UrlMappingsFilter.java:222)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.codehaus.groovy.grails.web.servlet.mvc.GrailsWebRequestFilter.doFilterInternal(GrailsWebRequestFilter.java:69)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.codehaus.groovy.grails.web.filters.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:67)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:344)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:261)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1040)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:607)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:315)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.codehaus.groovy.grails.web.pages.exceptions.GroovyPagesException: Could not parse script [/home/borrero/Documents/Developer/workspace/social-network-grails/grails-app/views/user/index.gsp]: startup failed:
+home_borrero_Documents_Developer_workspace_social_network_grails_grails_app_views_user_index_gsp: 1: unable to resolve class com.timeshots.blacklabel.socialnetworkgrails.User
+ @ line 1, column 1.
+   import com.timeshots.blacklabel.socialnetworkgrails.User
+   ^
+
+1 error
+
+	at org.codehaus.groovy.grails.web.pages.GroovyPagesTemplateEngine.compileGroovyPage(GroovyPagesTemplateEngine.java:620)
+	at org.codehaus.groovy.grails.web.pages.GroovyPagesTemplateEngine.buildPageMetaInfo(GroovyPagesTemplateEngine.java:560)
+	at org.codehaus.groovy.grails.web.pages.GroovyPagesTemplateEngine.buildPageMetaInfo(GroovyPagesTemplateEngine.java:459)
+	at org.codehaus.groovy.grails.web.pages.GroovyPagesTemplateEngine$1$1.updateValue(GroovyPagesTemplateEngine.java:280)
+	at org.codehaus.groovy.grails.web.pages.GroovyPagesTemplateEngine$1$1.updateValue(GroovyPagesTemplateEngine.java:265)
+	at grails.util.CacheEntry.getValue(CacheEntry.java:141)
+	at grails.util.CacheEntry.getValue(CacheEntry.java:81)
+	at org.codehaus.groovy.grails.web.pages.GroovyPagesTemplateEngine.createTemplate(GroovyPagesTemplateEngine.java:262)
+	at org.codehaus.groovy.grails.web.pages.GroovyPagesTemplateEngine.createTemplate(GroovyPagesTemplateEngine.java:252)
+	at org.codehaus.groovy.grails.web.pages.GroovyPagesTemplateEngine.createTemplate(GroovyPagesTemplateEngine.java:374)
+	at org.codehaus.groovy.grails.web.servlet.view.GroovyPageView.initTemplate(GroovyPageView.java:170)
+	at org.codehaus.groovy.grails.web.servlet.view.GroovyPageView.afterPropertiesSet(GroovyPageView.java:159)
+	at org.codehaus.groovy.grails.web.servlet.view.GroovyPageViewResolver.createGroovyPageView(GroovyPageViewResolver.java:187)
+	at org.codehaus.groovy.grails.web.servlet.view.GroovyPageViewResolver.createGrailsView(GroovyPageViewResolver.java:170)
+	at org.codehaus.groovy.grails.web.servlet.view.GroovyPageViewResolver.loadView(GroovyPageViewResolver.java:96)
+	at org.springframework.web.servlet.view.AbstractCachingViewResolver.createView(AbstractCachingViewResolver.java:244)
+	at org.springframework.web.servlet.view.UrlBasedViewResolver.createView(UrlBasedViewResolver.java:402)
+	at org.springframework.web.servlet.view.AbstractCachingViewResolver.resolveViewName(AbstractCachingViewResolver.java:146)
+	at org.codehaus.groovy.grails.web.servlet.view.GroovyPageViewResolver.resolveViewName(GroovyPageViewResolver.java:85)
+	at org.codehaus.groovy.grails.web.servlet.view.GrailsLayoutViewResolver.resolveViewName(GrailsLayoutViewResolver.java:50)
+	at org.codehaus.groovy.grails.web.util.WebUtils.resolveView(WebUtils.java:170)
+	at org.codehaus.groovy.grails.web.mapping.UrlMappingUtils.resolveView(UrlMappingUtils.java:78)
+	at org.codehaus.groovy.grails.web.mapping.filter.UrlMappingsFilter.renderViewForUrlMappingInfo(UrlMappingsFilter.java:400)
+	... 30 more
+Caused by: org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+home_borrero_Documents_Developer_workspace_social_network_grails_grails_app_views_user_index_gsp: 1: unable to resolve class com.timeshots.blacklabel.socialnetworkgrails.User
+ @ line 1, column 1.
+   import com.timeshots.blacklabel.socialnetworkgrails.User
+   ^
+
+1 error
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)
+	at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:938)
+	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:585)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:534)
+	at grails.util.CacheEntry.getValue(CacheEntry.java:141)
+	at grails.util.CacheEntry.getValue(CacheEntry.java:81)
+	... 3 more
+2014-08-03 20:19:18,860 [http-bio-8080-exec-10] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.web.pages.exceptions.GroovyPagesException: Could not parse script [/home/borrero/Documents/Developer/workspace/social-network-grails/grails-app/views/user/index.gsp]: startup failed:
+home_borrero_Documents_Developer_workspace_social_network_grails_grails_app_views_user_index_gsp: 1: unable to resolve class com.timeshots.blacklabel.socialnetworkgrails.User
+ @ line 1, column 1.
+   import com.timeshots.blacklabel.socialnetworkgrails.User
+   ^
+
+1 error
+
+	at org.codehaus.groovy.grails.web.pages.GroovyPagesTemplateEngine.compileGroovyPage(GroovyPagesTemplateEngine.java:620)
+	at org.codehaus.groovy.grails.web.pages.GroovyPagesTemplateEngine.buildPageMetaInfo(GroovyPagesTemplateEngine.java:560)
+	at org.codehaus.groovy.grails.web.pages.GroovyPagesTemplateEngine.buildPageMetaInfo(GroovyPagesTemplateEngine.java:459)
+	at org.codehaus.groovy.grails.web.pages.GroovyPagesTemplateEngine$1$1.updateValue(GroovyPagesTemplateEngine.java:280)
+	at org.codehaus.groovy.grails.web.pages.GroovyPagesTemplateEngine$1$1.updateValue(GroovyPagesTemplateEngine.java:265)
+	at grails.util.CacheEntry.getValue(CacheEntry.java:141)
+	at grails.util.CacheEntry.getValue(CacheEntry.java:81)
+	at org.codehaus.groovy.grails.web.pages.GroovyPagesTemplateEngine.createTemplate(GroovyPagesTemplateEngine.java:262)
+	at org.codehaus.groovy.grails.web.pages.GroovyPagesTemplateEngine.createTemplate(GroovyPagesTemplateEngine.java:252)
+	at org.codehaus.groovy.grails.web.pages.GroovyPagesTemplateEngine.createTemplate(GroovyPagesTemplateEngine.java:374)
+	at org.codehaus.groovy.grails.web.servlet.view.GroovyPageView.initTemplate(GroovyPageView.java:170)
+	at org.codehaus.groovy.grails.web.servlet.view.GroovyPageView.afterPropertiesSet(GroovyPageView.java:159)
+	at org.codehaus.groovy.grails.web.servlet.view.GroovyPageViewResolver.createGroovyPageView(GroovyPageViewResolver.java:187)
+	at org.codehaus.groovy.grails.web.servlet.view.GroovyPageViewResolver.createGrailsView(GroovyPageViewResolver.java:170)
+	at org.codehaus.groovy.grails.web.servlet.view.GroovyPageViewResolver.loadView(GroovyPageViewResolver.java:96)
+	at org.springframework.web.servlet.view.AbstractCachingViewResolver.createView(AbstractCachingViewResolver.java:244)
+	at org.springframework.web.servlet.view.UrlBasedViewResolver.createView(UrlBasedViewResolver.java:402)
+	at org.springframework.web.servlet.view.AbstractCachingViewResolver.resolveViewName(AbstractCachingViewResolver.java:146)
+	at org.codehaus.groovy.grails.web.servlet.view.GroovyPageViewResolver.resolveViewName(GroovyPageViewResolver.java:85)
+	at org.codehaus.groovy.grails.web.servlet.view.GrailsLayoutViewResolver.resolveViewName(GrailsLayoutViewResolver.java:50)
+	at org.codehaus.groovy.grails.web.util.WebUtils.resolveView(WebUtils.java:170)
+	at org.codehaus.groovy.grails.web.mapping.UrlMappingUtils.resolveView(UrlMappingUtils.java:78)
+	at org.codehaus.groovy.grails.web.mapping.filter.UrlMappingsFilter.renderViewForUrlMappingInfo(UrlMappingsFilter.java:400)
+	at org.codehaus.groovy.grails.web.mapping.filter.UrlMappingsFilter.doFilterInternal(UrlMappingsFilter.java:222)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.codehaus.groovy.grails.web.servlet.mvc.GrailsWebRequestFilter.doFilterInternal(GrailsWebRequestFilter.java:69)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.codehaus.groovy.grails.web.filters.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:67)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:344)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:261)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1040)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:607)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:315)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+home_borrero_Documents_Developer_workspace_social_network_grails_grails_app_views_user_index_gsp: 1: unable to resolve class com.timeshots.blacklabel.socialnetworkgrails.User
+ @ line 1, column 1.
+   import com.timeshots.blacklabel.socialnetworkgrails.User
+   ^
+
+1 error
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)
+	at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:938)
+	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:585)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:534)
+	at grails.util.CacheEntry.getValue(CacheEntry.java:141)
+	at grails.util.CacheEntry.getValue(CacheEntry.java:81)
+	... 3 more
+2014-08-03 20:19:18,861 [http-bio-8080-exec-10] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+home_borrero_Documents_Developer_workspace_social_network_grails_grails_app_views_user_index_gsp: 1: unable to resolve class com.timeshots.blacklabel.socialnetworkgrails.User
+ @ line 1, column 1.
+   import com.timeshots.blacklabel.socialnetworkgrails.User
+   ^
+
+1 error
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)
+	at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:938)
+	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:585)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:534)
+	at grails.util.CacheEntry.getValue(CacheEntry.java:141)
+	at grails.util.CacheEntry.getValue(CacheEntry.java:81)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+2014-08-03 20:19:18,861 [http-bio-8080-exec-10] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.web.mapping.exceptions.UrlMappingException: Error mapping onto view [user/index]: Could not parse script [/home/borrero/Documents/Developer/workspace/social-network-grails/grails-app/views/user/index.gsp]: startup failed:
+home_borrero_Documents_Developer_workspace_social_network_grails_grails_app_views_user_index_gsp: 1: unable to resolve class com.timeshots.blacklabel.socialnetworkgrails.User
+ @ line 1, column 1.
+   import com.timeshots.blacklabel.socialnetworkgrails.User
+   ^
+
+1 error
+
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.codehaus.groovy.grails.web.pages.exceptions.GroovyPagesException: Could not parse script [/home/borrero/Documents/Developer/workspace/social-network-grails/grails-app/views/user/index.gsp]: startup failed:
+home_borrero_Documents_Developer_workspace_social_network_grails_grails_app_views_user_index_gsp: 1: unable to resolve class com.timeshots.blacklabel.socialnetworkgrails.User
+ @ line 1, column 1.
+   import com.timeshots.blacklabel.socialnetworkgrails.User
+   ^
+
+1 error
+
+	at grails.util.CacheEntry.getValue(CacheEntry.java:141)
+	at grails.util.CacheEntry.getValue(CacheEntry.java:81)
+	... 3 more
+Caused by: org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+home_borrero_Documents_Developer_workspace_social_network_grails_grails_app_views_user_index_gsp: 1: unable to resolve class com.timeshots.blacklabel.socialnetworkgrails.User
+ @ line 1, column 1.
+   import com.timeshots.blacklabel.socialnetworkgrails.User
+   ^
+
+1 error
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)
+	at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:938)
+	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:585)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:534)
+	... 5 more
+2014-08-03 20:19:18,866 [http-bio-8080-exec-10] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.web.mapping.exceptions.UrlMappingException: Error mapping onto view [user/index]: Could not parse script [/home/borrero/Documents/Developer/workspace/social-network-grails/grails-app/views/user/index.gsp]: startup failed:
+home_borrero_Documents_Developer_workspace_social_network_grails_grails_app_views_user_index_gsp: 1: unable to resolve class com.timeshots.blacklabel.socialnetworkgrails.User
+ @ line 1, column 1.
+   import com.timeshots.blacklabel.socialnetworkgrails.User
+   ^
+
+1 error
+
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.codehaus.groovy.grails.web.pages.exceptions.GroovyPagesException: Could not parse script [/home/borrero/Documents/Developer/workspace/social-network-grails/grails-app/views/user/index.gsp]: startup failed:
+home_borrero_Documents_Developer_workspace_social_network_grails_grails_app_views_user_index_gsp: 1: unable to resolve class com.timeshots.blacklabel.socialnetworkgrails.User
+ @ line 1, column 1.
+   import com.timeshots.blacklabel.socialnetworkgrails.User
+   ^
+
+1 error
+
+	at grails.util.CacheEntry.getValue(CacheEntry.java:141)
+	at grails.util.CacheEntry.getValue(CacheEntry.java:81)
+	... 3 more
+Caused by: org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+home_borrero_Documents_Developer_workspace_social_network_grails_grails_app_views_user_index_gsp: 1: unable to resolve class com.timeshots.blacklabel.socialnetworkgrails.User
+ @ line 1, column 1.
+   import com.timeshots.blacklabel.socialnetworkgrails.User
+   ^
+
+1 error
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)
+	at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:938)
+	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:585)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:534)
+	... 5 more
+2014-08-03 20:19:18,866 [http-bio-8080-exec-10] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.web.pages.exceptions.GroovyPagesException: Could not parse script [/home/borrero/Documents/Developer/workspace/social-network-grails/grails-app/views/user/index.gsp]: startup failed:
+home_borrero_Documents_Developer_workspace_social_network_grails_grails_app_views_user_index_gsp: 1: unable to resolve class com.timeshots.blacklabel.socialnetworkgrails.User
+ @ line 1, column 1.
+   import com.timeshots.blacklabel.socialnetworkgrails.User
+   ^
+
+1 error
+
+	at grails.util.CacheEntry.getValue(CacheEntry.java:141)
+	at grails.util.CacheEntry.getValue(CacheEntry.java:81)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+home_borrero_Documents_Developer_workspace_social_network_grails_grails_app_views_user_index_gsp: 1: unable to resolve class com.timeshots.blacklabel.socialnetworkgrails.User
+ @ line 1, column 1.
+   import com.timeshots.blacklabel.socialnetworkgrails.User
+   ^
+
+1 error
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)
+	at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:938)
+	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:585)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:534)
+	... 5 more
+2014-08-03 20:19:18,867 [http-bio-8080-exec-10] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+home_borrero_Documents_Developer_workspace_social_network_grails_grails_app_views_user_index_gsp: 1: unable to resolve class com.timeshots.blacklabel.socialnetworkgrails.User
+ @ line 1, column 1.
+   import com.timeshots.blacklabel.socialnetworkgrails.User
+   ^
+
+1 error
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)
+	at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:938)
+	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:585)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:534)
+	at grails.util.CacheEntry.getValue(CacheEntry.java:141)
+	at grails.util.CacheEntry.getValue(CacheEntry.java:81)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+2014-08-03 20:19:18,867 [http-bio-8080-exec-10] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.web.mapping.exceptions.UrlMappingException: Error mapping onto view [user/index]: Could not parse script [/home/borrero/Documents/Developer/workspace/social-network-grails/grails-app/views/user/index.gsp]: startup failed:
+home_borrero_Documents_Developer_workspace_social_network_grails_grails_app_views_user_index_gsp: 1: unable to resolve class com.timeshots.blacklabel.socialnetworkgrails.User
+ @ line 1, column 1.
+   import com.timeshots.blacklabel.socialnetworkgrails.User
+   ^
+
+1 error
+
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.codehaus.groovy.grails.web.pages.exceptions.GroovyPagesException: Could not parse script [/home/borrero/Documents/Developer/workspace/social-network-grails/grails-app/views/user/index.gsp]: startup failed:
+home_borrero_Documents_Developer_workspace_social_network_grails_grails_app_views_user_index_gsp: 1: unable to resolve class com.timeshots.blacklabel.socialnetworkgrails.User
+ @ line 1, column 1.
+   import com.timeshots.blacklabel.socialnetworkgrails.User
+   ^
+
+1 error
+
+	at grails.util.CacheEntry.getValue(CacheEntry.java:141)
+	at grails.util.CacheEntry.getValue(CacheEntry.java:81)
+	... 3 more
+Caused by: org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+home_borrero_Documents_Developer_workspace_social_network_grails_grails_app_views_user_index_gsp: 1: unable to resolve class com.timeshots.blacklabel.socialnetworkgrails.User
+ @ line 1, column 1.
+   import com.timeshots.blacklabel.socialnetworkgrails.User
+   ^
+
+1 error
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)
+	at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:938)
+	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:585)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:534)
+	... 5 more
+2014-08-03 20:19:18,941 [http-bio-8080-exec-10] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.web.mapping.exceptions.UrlMappingException: Error mapping onto view [user/index]: Could not parse script [/home/borrero/Documents/Developer/workspace/social-network-grails/grails-app/views/user/index.gsp]: startup failed:
+home_borrero_Documents_Developer_workspace_social_network_grails_grails_app_views_user_index_gsp: 1: unable to resolve class com.timeshots.blacklabel.socialnetworkgrails.User
+ @ line 1, column 1.
+   import com.timeshots.blacklabel.socialnetworkgrails.User
+   ^
+
+1 error
+
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.codehaus.groovy.grails.web.pages.exceptions.GroovyPagesException: Could not parse script [/home/borrero/Documents/Developer/workspace/social-network-grails/grails-app/views/user/index.gsp]: startup failed:
+home_borrero_Documents_Developer_workspace_social_network_grails_grails_app_views_user_index_gsp: 1: unable to resolve class com.timeshots.blacklabel.socialnetworkgrails.User
+ @ line 1, column 1.
+   import com.timeshots.blacklabel.socialnetworkgrails.User
+   ^
+
+1 error
+
+	at grails.util.CacheEntry.getValue(CacheEntry.java:141)
+	at grails.util.CacheEntry.getValue(CacheEntry.java:81)
+	... 3 more
+Caused by: org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+home_borrero_Documents_Developer_workspace_social_network_grails_grails_app_views_user_index_gsp: 1: unable to resolve class com.timeshots.blacklabel.socialnetworkgrails.User
+ @ line 1, column 1.
+   import com.timeshots.blacklabel.socialnetworkgrails.User
+   ^
+
+1 error
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)
+	at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:938)
+	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:585)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:534)
+	... 5 more
+2014-08-03 20:19:18,941 [http-bio-8080-exec-10] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.web.pages.exceptions.GroovyPagesException: Could not parse script [/home/borrero/Documents/Developer/workspace/social-network-grails/grails-app/views/user/index.gsp]: startup failed:
+home_borrero_Documents_Developer_workspace_social_network_grails_grails_app_views_user_index_gsp: 1: unable to resolve class com.timeshots.blacklabel.socialnetworkgrails.User
+ @ line 1, column 1.
+   import com.timeshots.blacklabel.socialnetworkgrails.User
+   ^
+
+1 error
+
+	at grails.util.CacheEntry.getValue(CacheEntry.java:141)
+	at grails.util.CacheEntry.getValue(CacheEntry.java:81)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+home_borrero_Documents_Developer_workspace_social_network_grails_grails_app_views_user_index_gsp: 1: unable to resolve class com.timeshots.blacklabel.socialnetworkgrails.User
+ @ line 1, column 1.
+   import com.timeshots.blacklabel.socialnetworkgrails.User
+   ^
+
+1 error
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)
+	at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:938)
+	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:585)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:534)
+	... 5 more
+2014-08-03 20:19:18,942 [http-bio-8080-exec-10] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+home_borrero_Documents_Developer_workspace_social_network_grails_grails_app_views_user_index_gsp: 1: unable to resolve class com.timeshots.blacklabel.socialnetworkgrails.User
+ @ line 1, column 1.
+   import com.timeshots.blacklabel.socialnetworkgrails.User
+   ^
+
+1 error
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)
+	at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:938)
+	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:585)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:534)
+	at grails.util.CacheEntry.getValue(CacheEntry.java:141)
+	at grails.util.CacheEntry.getValue(CacheEntry.java:81)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+2014-08-03 20:19:18,942 [http-bio-8080-exec-10] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.web.mapping.exceptions.UrlMappingException: Error mapping onto view [user/index]: Could not parse script [/home/borrero/Documents/Developer/workspace/social-network-grails/grails-app/views/user/index.gsp]: startup failed:
+home_borrero_Documents_Developer_workspace_social_network_grails_grails_app_views_user_index_gsp: 1: unable to resolve class com.timeshots.blacklabel.socialnetworkgrails.User
+ @ line 1, column 1.
+   import com.timeshots.blacklabel.socialnetworkgrails.User
+   ^
+
+1 error
+
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.codehaus.groovy.grails.web.pages.exceptions.GroovyPagesException: Could not parse script [/home/borrero/Documents/Developer/workspace/social-network-grails/grails-app/views/user/index.gsp]: startup failed:
+home_borrero_Documents_Developer_workspace_social_network_grails_grails_app_views_user_index_gsp: 1: unable to resolve class com.timeshots.blacklabel.socialnetworkgrails.User
+ @ line 1, column 1.
+   import com.timeshots.blacklabel.socialnetworkgrails.User
+   ^
+
+1 error
+
+	at grails.util.CacheEntry.getValue(CacheEntry.java:141)
+	at grails.util.CacheEntry.getValue(CacheEntry.java:81)
+	... 3 more
+Caused by: org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+home_borrero_Documents_Developer_workspace_social_network_grails_grails_app_views_user_index_gsp: 1: unable to resolve class com.timeshots.blacklabel.socialnetworkgrails.User
+ @ line 1, column 1.
+   import com.timeshots.blacklabel.socialnetworkgrails.User
+   ^
+
+1 error
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)
+	at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:938)
+	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:585)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:534)
+	... 5 more
