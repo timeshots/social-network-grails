@@ -40,7 +40,6 @@ grails.project.dependency.resolution = {
         mavenLocal()
         grailsCentral()
         mavenCentral()
-        mavenRepo 'http://repo.spring.io/milestone'
         // uncomment these (or add new ones) to enable remote dependency resolution from public Maven repositories
         mavenRepo "http://snapshots.repository.codehaus.org"
         mavenRepo "http://repository.codehaus.org"
@@ -69,11 +68,6 @@ grails.project.dependency.resolution = {
         runtime ":hibernate4:4.3.5.4" // or ":hibernate:3.6.10.16"
         runtime ":database-migration:1.4.0"
         runtime ":jquery:1.11.1"
-
-        /*compile ":spring-security-core:2.0-RC3"
-        compile ":spring-security-rest:1.4.0.RC3", {
-            excludes: 'spring-security-core'
-        }*/
 
         // Uncomment these to enable additional asset-pipeline capabilities
         //compile ":sass-asset-pipeline:1.7.4"

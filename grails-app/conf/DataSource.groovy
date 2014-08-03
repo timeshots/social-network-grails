@@ -18,7 +18,7 @@ hibernate {
 environments {
     development {
         dataSource {
-            dbCreate = "update" // one of 'create', 'create-drop', 'update', 'validate', ''
+            dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
             url = "jdbc:mysql://localhost/timeshots?useUnicode=yes&characterEncoding=UTF-8"
             username = "root"
             password = "061190"
@@ -28,6 +28,9 @@ environments {
         dataSource {
             dbCreate = "update"
             url = "jdbc:h2:mem:testDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
+            /*url = "jdbc:mysql://localhost/timeshots?useUnicode=yeuseUnicodes&characterEncoding=UTF-8"
+            username = "root"
+            password = "061190"*/
         }
     }
     production {
