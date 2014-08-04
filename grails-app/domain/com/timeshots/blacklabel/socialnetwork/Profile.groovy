@@ -10,6 +10,8 @@ class Profile {
     String nationality
     String id
 
+    static hasMany = [user:User, address:Address, contact:Contact]
+
     /*User user
     Address address
     Contact contact*/

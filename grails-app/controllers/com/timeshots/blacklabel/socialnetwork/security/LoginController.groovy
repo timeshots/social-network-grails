@@ -26,7 +26,7 @@ class LoginController {
     }
 
     def auth(){
-        
+
     }
 
     def index() { }
