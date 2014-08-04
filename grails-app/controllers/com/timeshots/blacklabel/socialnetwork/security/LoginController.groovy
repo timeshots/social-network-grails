@@ -8,7 +8,7 @@ class LoginController {
 
     def authenticate(){
 
-        user = findUserByUsernameAndPassword(params?.username, params?.password)
+        user = User.findByUsernameAndPassword(params?.username, params?.password)
 
         if(user){
             flash.message = "Login Succeed"
@@ -23,6 +23,10 @@ class LoginController {
     def logout(){
         session.user = null
         redirect(action: 'auth')
+    }
+
+    def auth(){
+
     }
 
     def index() { }

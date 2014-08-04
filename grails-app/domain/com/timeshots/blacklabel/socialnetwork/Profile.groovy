@@ -9,6 +9,7 @@ class Profile {
     String religion
     String civilStatus
     String nationality
+    String id
 
     User user
     Address address
@@ -23,8 +24,13 @@ class Profile {
         civilStatus(nullable: true)
         nationality(nullbale: true)
 
-        user(unique: true, nullable: false)
-        address(unique: true, nullble: false)
-        contact(unique: true, nullable: false)
+        user(nullable: false)
+        address(nullable: false)
+        contact(nullable: false)
+    }
+
+    static mapping = {
+        table 'profile'
+        id generator:'uuid'
     }
 }

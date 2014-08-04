@@ -2,17 +2,17 @@ package com.timeshots.blacklabel.socialnetwork
 
 class User {
 
-    transient springSecurityService
+    //transient springSecurityService
     String firstName
     String lastName
     String emailAddress
     String username
     String password
-    Boolean hasConfirmedEmail
+    Boolean hasConfirmedEmail = false
     String id
 
     static belongsTo = Profile
-    static transients = ['springSecurityService']
+    //static transients = ['springSecurityService']
 
     static constraints = {
         firstName(nullable: false)
@@ -30,7 +30,7 @@ class User {
         id generator:'uuid'
     }
 
-    def beforeInsert() {
+    /*def beforeInsert() {
         if (password != null) {
             encodePassword()
         }
@@ -44,5 +44,5 @@ class User {
 
     protected void encodePassword() {
         password = springSecurityService.encodePassword(password)
-    }
+    }*/
 }

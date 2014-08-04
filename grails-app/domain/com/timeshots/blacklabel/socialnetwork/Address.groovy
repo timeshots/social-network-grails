@@ -5,6 +5,7 @@ class Address {
     String city
     String state
     String zipCode
+    String id
 
     static belongsTo = Profile
 
@@ -13,5 +14,10 @@ class Address {
         city(nullable: false)
         state(nullable: false)
         zipCode(nullable: false)
+    }
+
+    static mapping = {
+        table 'address'
+        id generator:'uuid'
     }
 }

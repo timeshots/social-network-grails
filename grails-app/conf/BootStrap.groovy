@@ -24,7 +24,7 @@ class BootStrap {
         language.add("Filipino")
         language.add("German")
 
-        Profile profile1 = new Profile(birthDate: new Date(1990, 06, 11), gender: 'Male', interestedIn: 'Female', languages: language, religion: 'Roman Catholic', civilStatus: 'Single', nationality: 'Pilipino', user: larry, address: add_one, contact: contact1).save(flush: true, failOnError: true)
+        Profile profile1 = new Profile(birthDate: new Date(1990, 05, 11), gender: 'Male', interestedIn: 'Female', languages: language, religion: 'Roman Catholic', civilStatus: 'Single', nationality: 'Pilipino', user: larry, address: add_one, contact: contact1).save(flush: true, failOnError: true)
     }
 
     def destroy = {
