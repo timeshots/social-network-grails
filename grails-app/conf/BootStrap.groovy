@@ -18,13 +18,7 @@ class BootStrap {
         User lorina = new User(firstName: 'Lorina', lastName: 'Borrero', emailAddress: 'lorina@gmail.com', username: 'lorina', password: 'lorina_yhads', hasConfirmedEmail: true).save(flush: true, failOnError: true)
         User whitehot = new User(firstName: 'White', lastName: 'Hot', emailAddress: 'whitehot@gmail.com', username: 'white', password: 'whitehot', hasConfirmedEmail: true).save(flush: true, failOnError: true)
 
-        List<String> language = new ArrayList<String>()
-        language.add("English")
-        language.add("French")
-        language.add("Filipino")
-        language.add("German")
-
-        Profile profile1 = new Profile(birthDate: new Date(1990, 05, 11), gender: 'Male', interestedIn: 'Female', languages: language, religion: 'Roman Catholic', civilStatus: 'Single', nationality: 'Pilipino', user: larry, address: add_one, contact: contact1).save(flush: true, failOnError: true)
+        Profile profile1 = new Profile(birthDate: new Date(1990, 05, 11), gender: 'Male', interestedIn: 'Female', religion: 'Roman Catholic', civilStatus: 'Single', nationality: 'Pilipino'/*, user: larry, address: add_one, contact: contact1*/).save(flush: true, failOnError: true)
     }
 
     def destroy = {
