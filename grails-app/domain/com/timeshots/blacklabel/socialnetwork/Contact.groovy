@@ -1,5 +1,8 @@
 package com.timeshots.blacklabel.socialnetwork
 
+import groovy.transform.EqualsAndHashCode
+
+@EqualsAndHashCode
 class Contact {
     String emailAddress
     String phoneNumber

@@ -1,5 +1,8 @@
 package com.timeshots.blacklabel.socialnetwork
 
+import groovy.transform.EqualsAndHashCode
+
+@EqualsAndHashCode
 class User {
 
     //transient springSecurityService
@@ -19,7 +22,7 @@ class User {
         lastName(nullable: false)
         emailAddress(nullable: false, email: true)
         username(nullable: true, matches:"[a-zA-Z0-9]+")
-        password(nullable: false, password: true)
+        password(nullable: false, password: true, minSize: 6)
         hasConfirmedEmail(nullable: false)
     }
 

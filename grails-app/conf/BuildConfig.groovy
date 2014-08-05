@@ -69,8 +69,8 @@ grails.project.dependency.resolution = {
         runtime ":database-migration:1.4.0"
         runtime ":jquery:1.11.1"
 
-        //compile ":spring-security-core:2.0-RC3"
-        /*compile ":spring-security-rest:1.4.0.RC3", {
+        /*compile ":spring-security-core:2.0-RC3"
+        compile ":spring-security-rest:1.4.0.RC3", {
             excludes: 'spring-security-core'
         }*/
 

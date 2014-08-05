@@ -77,20 +77,13 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${profileInstance?.user}">
-				<li class="fieldcontain">
-					<span id="user-label" class="property-label"><g:message code="profile.user.label" default="User" /></span>
-					
-						<span class="property-value" aria-labelledby="user-label"><g:link controller="user" action="show" id="${profileInstance?.user?.id}">${profileInstance?.user?.encodeAsHTML()}</g:link></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${profileInstance?.address}">
 				<li class="fieldcontain">
 					<span id="address-label" class="property-label"><g:message code="profile.address.label" default="Address" /></span>
 					
-						<span class="property-value" aria-labelledby="address-label"><g:link controller="address" action="show" id="${profileInstance?.address?.id}">${profileInstance?.address?.encodeAsHTML()}</g:link></span>
+						<g:each in="${profileInstance.address}" var="a">
+						<span class="property-value" aria-labelledby="address-label"><g:link controller="address" action="show" id="${a.id}">${a?.encodeAsHTML()}</g:link></span>
+						</g:each>
 					
 				</li>
 				</g:if>
@@ -99,7 +92,20 @@
 				<li class="fieldcontain">
 					<span id="contact-label" class="property-label"><g:message code="profile.contact.label" default="Contact" /></span>
 					
-						<span class="property-value" aria-labelledby="contact-label"><g:link controller="contact" action="show" id="${profileInstance?.contact?.id}">${profileInstance?.contact?.encodeAsHTML()}</g:link></span>
+						<g:each in="${profileInstance.contact}" var="c">
+						<span class="property-value" aria-labelledby="contact-label"><g:link controller="contact" action="show" id="${c.id}">${c?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${profileInstance?.user}">
+				<li class="fieldcontain">
+					<span id="user-label" class="property-label"><g:message code="profile.user.label" default="User" /></span>
+					
+						<g:each in="${profileInstance.user}" var="u">
+						<span class="property-value" aria-labelledby="user-label"><g:link controller="user" action="show" id="${u.id}">${u?.encodeAsHTML()}</g:link></span>
+						</g:each>
 					
 				</li>
 				</g:if>

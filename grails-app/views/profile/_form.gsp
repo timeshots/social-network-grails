@@ -56,30 +56,30 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: profileInstance, field: 'user', 'error')} required">
-	<label for="user">
-		<g:message code="profile.user.label" default="User" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:select id="user" name="user.id" from="${com.timeshots.blacklabel.socialnetwork.User.list()}" optionKey="id" required="" value="${profileInstance?.user?.id}" class="many-to-one"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: profileInstance, field: 'address', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: profileInstance, field: 'address', 'error')} ">
 	<label for="address">
 		<g:message code="profile.address.label" default="Address" />
-		<span class="required-indicator">*</span>
+		
 	</label>
-	<g:select id="address" name="address.id" from="${com.timeshots.blacklabel.socialnetwork.Address.list()}" optionKey="id" required="" value="${profileInstance?.address?.id}" class="many-to-one"/>
+	<g:select name="address" from="${com.timeshots.blacklabel.socialnetwork.Address.list()}" multiple="multiple" optionKey="id" size="5" value="${profileInstance?.address*.id}" class="many-to-many"/>
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: profileInstance, field: 'contact', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: profileInstance, field: 'contact', 'error')} ">
 	<label for="contact">
 		<g:message code="profile.contact.label" default="Contact" />
-		<span class="required-indicator">*</span>
+		
 	</label>
-	<g:select id="contact" name="contact.id" from="${com.timeshots.blacklabel.socialnetwork.Contact.list()}" optionKey="id" required="" value="${profileInstance?.contact?.id}" class="many-to-one"/>
+	<g:select name="contact" from="${com.timeshots.blacklabel.socialnetwork.Contact.list()}" multiple="multiple" optionKey="id" size="5" value="${profileInstance?.contact*.id}" class="many-to-many"/>
+
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: profileInstance, field: 'user', 'error')} ">
+	<label for="user">
+		<g:message code="profile.user.label" default="User" />
+		
+	</label>
+	<g:select name="user" from="${com.timeshots.blacklabel.socialnetwork.User.list()}" multiple="multiple" optionKey="id" size="5" value="${profileInstance?.user*.id}" class="many-to-many"/>
 
 </div>
 

@@ -6,6 +6,7 @@ dataSource {
     username = "root"
     password = "061190"
 }
+
 hibernate {
     cache.use_second_level_cache = true
     cache.use_query_cache = false

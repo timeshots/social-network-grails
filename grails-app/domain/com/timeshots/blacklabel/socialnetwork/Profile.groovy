@@ -1,5 +1,8 @@
 package com.timeshots.blacklabel.socialnetwork
 
+import groovy.transform.EqualsAndHashCode
+
+@EqualsAndHashCode
 class Profile {
 
     Date birthDate
@@ -10,11 +13,10 @@ class Profile {
     String nationality
     String id
 
-    static hasMany = [user:User, address:Address, contact:Contact]
-
-    /*User user
+    //static hasMany = [user:User, address:Address, contact:Contact]
+    Contact contact
     Address address
-    Contact contact*/
+    User user
 
     static constraints = {
         birthDate(nullable: true)
@@ -24,9 +26,9 @@ class Profile {
         civilStatus(nullable: true)
         nationality(nullbale: true)
 
-        /*user(nullable: false)
+        contact(nullable: false)
         address(nullable: false)
-        contact(nullable: false)*/
+        user(nullable: false)
     }
 
     static mapping = {
