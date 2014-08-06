@@ -4,11 +4,15 @@ import com.timeshots.blacklabel.socialnetwork.Address
 import com.timeshots.blacklabel.socialnetwork.User
 import com.timeshots.blacklabel.socialnetwork.Contact
 import com.timeshots.blacklabel.socialnetwork.Profile
+import com.timeshots.blacklabel.socialnetwork.security.Role
 
 class StagingDataInitializer implements BootstrapInitializerComponent{
 
     @Override
     void initialize(){
+        Role roleUser = new Role(authority: 'ROLE_USER').save(flush: true, failOnError: true)
+        Role roleAdmin = new Role(authority: 'ROLE_ADMIN').save(flush: true, failOnError: true)
+
         Address add_one = new Address(state: 'NY', city: 'Windsor', streetAddress: '117 W 2nd St', zipCode: '11111').save(flush: true, failOnError: true)
         Address add_two = new Address(state: 'NY', city: 'Windsor', streetAddress: '117 W 2nd St', zipCode: '22222').save(flush: true, failOnError: true)
         Address add_three = new Address(state: 'NY', city: 'Windsor', streetAddress: '117 W 2nd St', zipCode: "33333").save(flush: true, failOnError: true)

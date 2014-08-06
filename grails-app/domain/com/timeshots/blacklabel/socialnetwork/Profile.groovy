@@ -5,6 +5,10 @@ import groovy.transform.EqualsAndHashCode
 @EqualsAndHashCode
 class Profile {
 
+    Contact contact
+    Address address
+    User user
+
     Date birthDate
     String gender
     String interestedIn     // women or men
@@ -12,11 +16,6 @@ class Profile {
     String civilStatus
     String nationality
     String id
-
-    //static hasMany = [user:User, address:Address, contact:Contact]
-    Contact contact
-    Address address
-    User user
 
     static constraints = {
         birthDate(nullable: true)
@@ -26,9 +25,6 @@ class Profile {
         civilStatus(nullable: true)
         nationality(nullbale: true)
 
-        contact(nullable: false)
-        address(nullable: false)
-        user(nullable: false)
     }
 
     static mapping = {

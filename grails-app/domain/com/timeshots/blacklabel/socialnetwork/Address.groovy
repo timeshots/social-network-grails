@@ -10,8 +10,6 @@ class Address {
     String zipCode
     String id
 
-    static belongsTo = Profile
-
     static constraints = {
         streetAddress(nullable: false)
         city(nullable: false)

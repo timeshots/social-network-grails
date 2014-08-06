@@ -14,7 +14,6 @@ class User {
     Boolean hasConfirmedEmail = false
     String id
 
-    static belongsTo = Profile
     //static transients = ['springSecurityService']
 
     static constraints = {
