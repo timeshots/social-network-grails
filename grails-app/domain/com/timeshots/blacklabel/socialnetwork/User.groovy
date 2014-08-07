@@ -1,11 +1,13 @@
 package com.timeshots.blacklabel.socialnetwork
 
+import com.timeshots.blacklabel.socialnetwork.security.Role
+
 import groovy.transform.EqualsAndHashCode
 
 @EqualsAndHashCode
 class User {
 
-    //transient springSecurityService
+    transient springSecurityService
     String firstName
     String lastName
     String emailAddress
@@ -13,8 +15,9 @@ class User {
     String password
     Boolean hasConfirmedEmail = false
     String id
+    Role role
 
-    //static transients = ['springSecurityService']
+    static transients = ['springSecurityService']
 
     static constraints = {
         firstName(nullable: false)
@@ -23,6 +26,7 @@ class User {
         username(nullable: true, matches:"[a-zA-Z0-9]+")
         password(nullable: false, password: true, minSize: 6)
         hasConfirmedEmail(nullable: false)
+        role(nullable: false)
     }
 
     static mapping = {
@@ -32,7 +36,7 @@ class User {
         id generator:'uuid'
     }
 
-    /*def beforeInsert() {
+    def beforeInsert() {
         if (password != null) {
             encodePassword()
         }
@@ -46,5 +50,5 @@ class User {
 
     protected void encodePassword() {
         password = springSecurityService.encodePassword(password)
-    }*/
+    }
 }

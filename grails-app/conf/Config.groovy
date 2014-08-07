@@ -103,9 +103,34 @@ grails.hibernate.osiv.readonly = false
 environments {
     development {
         grails.logging.jul.usebridge = true
+        grails.plugins.airbrake.enabled = false
     }
+
+    staging{
+        log4j = {
+            error  'org.codehaus.groovy.grails.web.servlet',        // controllers
+                    'org.codehaus.groovy.grails.web.pages',          // GSP
+                    'org.codehaus.groovy.grails.web.sitemesh',       // layouts
+                    'org.codehaus.groovy.grails.web.mapping.filter', // URL mapping
+                    'org.codehaus.groovy.grails.web.mapping',        // URL mapping
+                    'org.codehaus.groovy.grails.commons',            // core / classloading
+                    'org.codehaus.groovy.grails.plugins',            // plugins
+                    'org.codehaus.groovy.grails.orm.hibernate',      // hibernate integration
+                    'org.springframework',
+                    'org.hibernate',
+                    'net.sf.ehcache.hibernate'
+
+            debug 'com.timeshots.blacklabel.socialnetwork.security'
+            debug 'com.timeshots.blacklabel.socialnetwork'
+            debug 'org.hibernate'
+        }
+
+        grails.plugins.airbrake.enabled = true
+    }
+
     production {
         grails.logging.jul.usebridge = false
+        grails.plugins.airbrake.enabled = true
         // TODO: grails.serverURL = "http://www.changeme.com"
     }
 }
@@ -129,4 +154,37 @@ log4j.main = {
            'org.springframework',
            'org.hibernate',
            'net.sf.ehcache.hibernate'
+
+    debug 'com.timeshots.blacklabel.socialnetwork.security'
+    debug 'com.timeshots.blacklabel.socialnetwork'
+    debug 'org.hibernate'
 }
+
+// Spring Security Core Plugin
+grails.plugin.springsecurity.authority.classname = 'com.timeshots.blacklabel.socialnetwork.security.Role'
+grails.plugin.springsecurity.securityConfigType = 'Annotation'
+
+grails.plugin.springsecurity.rest.token.storage.useGorm = true
+
+grails{
+    plugin{
+        springsecurity{
+            filterChain{
+                chainMap = [
+                    '/login/**' : 'anonymousAuthenticationFilter'
+                ]
+            }
+            rest{
+                token{
+                    validation{
+                        enabledAnonymousAccess = true
+                    }
+                }
+            }
+        }
+    }
+}
+
+grails.plugin.springsecurity.controllerAnnotations.staticRules = [
+        '/**': ['IS_AUTHENTICATED_ANONYMOUSLY']
+]
