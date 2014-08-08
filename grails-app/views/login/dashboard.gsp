@@ -2,8 +2,10 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta name="layout" content="main">
-		<title>Dashboard</title>
+		<title>Login Page</title>
+        <r:require module="bootstrap"/>
+        <r:layoutResources />
+        <link rel="stylesheet" href="${resource(dir: 'css/dashboard', file: 'dashboard.css')}" type="text/css">
 	</head>
 	<body>
         <div class="container">

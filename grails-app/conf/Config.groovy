@@ -120,9 +120,9 @@ environments {
                     'org.hibernate',
                     'net.sf.ehcache.hibernate'
 
-            debug 'com.timeshots.blacklabel.socialnetwork.security'
+            /*debug 'com.timeshots.blacklabel.socialnetwork.security'
             debug 'com.timeshots.blacklabel.socialnetwork'
-            debug 'org.hibernate'
+            debug 'org.hibernate'*/
         }
 
         grails.plugins.airbrake.enabled = true
@@ -155,9 +155,9 @@ log4j.main = {
            'org.hibernate',
            'net.sf.ehcache.hibernate'
 
-    debug 'com.timeshots.blacklabel.socialnetwork.security'
+    /*debug 'com.timeshots.blacklabel.socialnetwork.security'
     debug 'com.timeshots.blacklabel.socialnetwork'
-    debug 'org.hibernate'
+    debug 'org.hibernate'*/
 }
 
 // Spring Security Core Plugin

@@ -10,38 +10,48 @@ class LoginController {
 
     def authenticate(){
 
+        String message
         String username = params?.username
         String password = params?.password
 
-        if(!username){
-            flash.message = "Missing username"
-            redirect(action: 'auth')
+        if(!username || !password){
+            message = "Missing username or password"
         }
 
-        if(!password){
-            flash.message = "Missing password"
+        if(message){
+            flash.message = message
             redirect(action: 'auth')
+            return
         }
 
         user = User.findByUsername(username)
         if(!user){
             flash.message = "Unregistered user"
             redirect(action: 'auth')
+            return
         }
 
         if(passwordEncoder.isPasswordValid(user.password, password, null)){
-            flash.message = "Login Succeed"
             session.user = "User"
-            redirect(action: 'dashboard')
         }else{
-            flash.message = "Login Failed"
+            message = "Login Failed"
+        }
+
+        if(!message){
+            flash.message = "Login succeed"
+            redirect(action: 'dashboard')
+            return
+        }else{
+            flash.message = message
             redirect(action: 'auth')
+            return
         }
     }
 
     def logout(){
         session.user = null
         redirect(action: 'auth')
+        return
     }
 
     def dashboard(){

@@ -16,7 +16,7 @@ def dirTarget
 log.debug "dirLessSource: ${dirLessSource}"
 log.debug "dirTarget: ${dirTarget}"
 
-def cssFile = "bootstrap.css"
+def cssFile = "auth.css"
 def cssminFile = "bootstrap.min.css"
 
 log.debug "config: grails.plugins.twitterbootstrap.fixtaglib = ${configTagLib}"

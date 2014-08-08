@@ -1,0 +1,15 @@
+Testsuite: com.timeshots.blacklabel.socialnetwork.UserSpec
+Tests run: 1, Failures: 0, Errors: 1, Time elapsed: 4.686 sec
+------------- Standard Output ---------------
+--Output from Test that email address should not be blank[0]--
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+--Output from Test that email address should not be blank[0]--
+------------- ---------------- ---------------
+
+Testcase: Test that email address should not be blank[0] took 4.534 sec
+	Caused an ERROR
+No such property: given for class: com.timeshots.blacklabel.socialnetwork.UserSpec
+groovy.lang.MissingPropertyException: No such property: given for class: com.timeshots.blacklabel.socialnetwork.UserSpec
+	at com.timeshots.blacklabel.socialnetwork.UserSpec.Test that email address should not be blank(UserSpec.groovy:28)
+
