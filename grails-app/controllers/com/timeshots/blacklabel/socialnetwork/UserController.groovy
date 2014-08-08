@@ -101,4 +101,13 @@ class UserController {
             '*'{ render status: NOT_FOUND }
         }
     }
+
+    def dashboard(){
+    }
+
+    def logout(){
+        session.user = null
+        redirect(controller: 'home', action: 'home')
+        return
+    }
 }

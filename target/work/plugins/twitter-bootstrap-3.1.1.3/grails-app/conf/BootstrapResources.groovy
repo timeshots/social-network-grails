@@ -17,7 +17,7 @@ log.debug "dirLessSource: ${dirLessSource}"
 log.debug "dirTarget: ${dirTarget}"
 
 def cssFile = "auth.css"
-def cssminFile = "bootstrap.min.css"
+def cssminFile = "cover.min.css"
 
 log.debug "config: grails.plugins.twitterbootstrap.fixtaglib = ${configTagLib}"
 log.debug "config: grails.plugins.twitterbootstrap.defaultBundle = ${configDefaultBundle}"

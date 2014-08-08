@@ -119,10 +119,6 @@ environments {
                     'org.springframework',
                     'org.hibernate',
                     'net.sf.ehcache.hibernate'
-
-            /*debug 'com.timeshots.blacklabel.socialnetwork.security'
-            debug 'com.timeshots.blacklabel.socialnetwork'
-            debug 'org.hibernate'*/
         }
 
         grails.plugins.airbrake.enabled = true
@@ -154,10 +150,6 @@ log4j.main = {
            'org.springframework',
            'org.hibernate',
            'net.sf.ehcache.hibernate'
-
-    /*debug 'com.timeshots.blacklabel.socialnetwork.security'
-    debug 'com.timeshots.blacklabel.socialnetwork'
-    debug 'org.hibernate'*/
 }
 
 // Spring Security Core Plugin
@@ -182,6 +174,12 @@ grails{
                 }
             }
         }
+    }
+}
+
+grails.resources.modules = {
+    core {
+        dependsOn 'jquery, jquery-ui'
     }
 }
 

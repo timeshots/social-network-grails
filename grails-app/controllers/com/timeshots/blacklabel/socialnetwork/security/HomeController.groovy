@@ -6,9 +6,5 @@ class HomeController {
 
     }
 
-    def dashboard(){
-
-    }
-
     def index() { }
 }

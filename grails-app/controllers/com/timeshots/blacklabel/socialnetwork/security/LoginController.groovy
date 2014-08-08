@@ -24,7 +24,12 @@ class LoginController {
             return
         }
 
-        user = User.findByUsername(username)
+        if(username.contains('@')){
+            user = User.findByEmailAddress(username)
+        }else{
+            user = User.findByUsername(username)
+        }
+
         if(!user){
             flash.message = "Unregistered user"
             redirect(action: 'auth')
@@ -39,7 +44,7 @@ class LoginController {
 
         if(!message){
             flash.message = "Login succeed"
-            redirect(action: 'dashboard')
+            redirect(controller: 'user', action: 'dashboard')
             return
         }else{
             flash.message = message
@@ -48,19 +53,5 @@ class LoginController {
         }
     }
 
-    def logout(){
-        session.user = null
-        redirect(action: 'auth')
-        return
-    }
-
-    def dashboard(){
-
-    }
-
-    def auth(){
-
-    }
-
-    def index() { }
+    def auth(){}
 }
