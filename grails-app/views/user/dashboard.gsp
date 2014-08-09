@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Timeshots</title>
+		<title>Dashboard</title>
         <r:require module="bootstrap"/>
         <r:layoutResources />
         <link rel="shortcut icon" href="${resource(dir: 'images/timeshots', file: 'ts.ico')}" type="images/x-icon">

@@ -5,6 +5,7 @@
 	    <title>Sign Up</title>
         <r:require module="bootstrap"/>
         <r:layoutResources />
+        <link rel="shortcut icon" href="${resource(dir: 'images/timeshots', file: 'ts.ico')}" type="images/x-icon">
 		<link rel="stylesheet" href="${resource(dir: 'css/signup', file: 'signup.css')}" type="text/css">
 	</head>
 	<body>
