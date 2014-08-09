@@ -17,7 +17,7 @@
             <form class="form-signin" role="form" controller="Login" action="authenticate" method="POST" id="loginForm" autocomplete="off">
                 <div class="form-group">
                     <label for="exampleInputEmail1">Username :</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Username" name="username" />
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Username / Email" name="username" />
 
                     <label for="exampleInputPassword1">Password :</label>
                     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password" />
