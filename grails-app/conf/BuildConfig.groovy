@@ -112,6 +112,8 @@ grails.project.dependency.resolution = {
         compile ':quartz:1.0.1'
         compile ":platform-core:1.0.0"
         compile ":airbrake:0.9.4"
+
+        compile ":fatcow-icons:0.1.0"
     }
 }
 grails.project.dependency.resolver = "maven" // or ivy

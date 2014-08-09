@@ -5,6 +5,7 @@
 	    <title>Login Page</title>
         <r:require module="bootstrap"/>
         <r:layoutResources />
+        <link rel="icon" href="${resource(dir: 'images/timeshots', file: 'ts.ico')}">
 		<link rel="stylesheet" href="${resource(dir: 'css/login', file: 'auth.css')}" type="text/css">
 	</head>
 	<body>
