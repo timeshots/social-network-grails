@@ -11,7 +11,7 @@
 	<body>
         <div class="container">
             <h2>Sign Up</h2>
-            <h5>forever's free and always be.</h5><br/>
+            <h5>forever's free and always be.</h5>
             <form class="form-signin" role="form" controller="userRegistration" action="register" method="POST" id="loginForm" autocomplete="off">
                 <g:if test="${flash.message}">
                     <div class="alert alert-danger">${flash.message}</div>

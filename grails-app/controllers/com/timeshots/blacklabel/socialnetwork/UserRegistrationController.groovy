@@ -21,17 +21,6 @@ class UserRegistrationController {
         Integer birthYear = params.int('birthday_year')
         Integer gender = params.int('sex')
 
-        println "firstName : " + firstName
-        println "lastName : " + lastName
-        println "username : " + username
-        println "email : " + emailAddress
-        println "password : " + password
-        println "confirmPassword : " + confirmPassword
-        println "birthMonth : " + birthMonth
-        println "birthDate : " + birthDate
-        println "birthYear : " + birthYear
-        println "gender : " + gender
-
         if(!password.equals(confirmPassword)){
             flash.message = "password is not equal to confirm password"
             redirect(controller: 'userRegistration', action: 'signup')

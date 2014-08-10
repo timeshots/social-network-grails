@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Welcome to Timeshots</title>
+		<title>Timeshots</title>
         <r:require module="bootstrap"/>
         <r:layoutResources />
         <meta charset="utf-8">

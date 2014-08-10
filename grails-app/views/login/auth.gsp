@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	    <title>Login Page</title>
+	    <title>Timeshots - Sign In</title>
         <r:require module="bootstrap"/>
         <r:layoutResources />
         <link rel="icon" href="${resource(dir: 'images/timeshots', file: 'ts.ico')}">
