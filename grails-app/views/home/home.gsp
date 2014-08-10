@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Timeshots</title>
+		<title>Welcome to Timeshots</title>
         <r:require module="bootstrap"/>
-        <r:require module="core"/>
         <r:layoutResources />
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,8 +12,6 @@
         <link rel="shortcut icon" href="${resource(dir: 'images', file: 'favicon.ico')}" type="images/x-icon">
         <link rel="stylesheet" href="${resource(dir: 'css/home', file: 'cover.css')}" type="text/css">
         <link rel="stylesheet" href="${resource(dir: 'css/home', file: 'cover.min.css')}" type="text/css"
-        <g:javascript library="application" />
-        <g:javascript library="jquery" />
 	</head>
 	<body>
         <div class="site-wrapper">
@@ -49,8 +46,10 @@
                 </div>
             </div>
         </div>
-    <g:javascript library="bootstrapMINJS"/>
-    <g:javascript library="bootstrapJS"/>
+    <script src="/js/home/bootstrap.min.js"></script>
+    <script src="/js/home/docs.min.js"></script>
+    <script src="/js/home/ie10-viewport-bug-workaround.js"></script>
+    <script src="/js/home/ie-emulation-modes-warning.js"></script>
     <r:layoutResources />
     </body>
 </html>

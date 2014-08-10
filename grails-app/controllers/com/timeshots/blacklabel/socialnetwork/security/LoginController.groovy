@@ -37,14 +37,14 @@ class LoginController {
         }
 
         if(passwordEncoder.isPasswordValid(user.password, password, null)){
-            session.user = "User"
+            session.user = user
         }else{
             message = "Login Failed"
         }
 
         if(!message){
             flash.message = "Login succeed"
-            redirect(controller: 'user', action: 'dashboard')
+            redirect(controller: "user", action: 'dashboard')
             return
         }else{
             flash.message = message

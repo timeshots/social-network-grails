@@ -13,7 +13,10 @@ class User {
     String emailAddress
     String username
     String password
+    String gender
+    Date birthDate
     Boolean hasConfirmedEmail = false
+    Date dateConfirmed
     String id
     Role role
 
@@ -23,9 +26,12 @@ class User {
         firstName(nullable: false)
         lastName(nullable: false)
         emailAddress(nullable: false, email: true)
-        username(nullable: true, matches:"[a-zA-Z0-9]+")
+        username(nullable: false, matches:"[a-zA-Z0-9]+")
         password(nullable: false, password: true, minSize: 6)
-        hasConfirmedEmail(nullable: false)
+        gender(nullable: false)
+        birthDate(nullable: false)
+        hasConfirmedEmail(nullable: true)
+        dateConfirmed(nullable: true)
         role(nullable: false)
     }
 
