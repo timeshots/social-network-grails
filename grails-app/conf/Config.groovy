@@ -30,7 +30,22 @@ grails.mime.types = [ // the first one is the default format
     hal:           ['application/hal+json','application/hal+xml'],
     xml:           ['text/xml', 'application/xml']
 ]
+/***********************************************************************/
+grails.plugin.springsecurity.securityConfigType = 'InterceptUrlMap'
+grails.plugin.springsecurity.interceptUrlMap = [
+        '/person/index':    ['ROLE_USER, ROLE_ADMIN, IS_AUTHENTICATED_FULLY'],
+        '/person*':       ['ROLE_ADMIN'],
+        '/address*':      ['ROLE_ADMIN'],
+        '/js*':           ['IS_AUTHENTICATED_ANONYMOUSLY'],
+        '/css*':          ['IS_AUTHENTICATED_ANONYMOUSLY'],
+        '/images*':       ['IS_AUTHENTICATED_ANONYMOUSLY'],
+        '':               ['IS_AUTHENTICATED_FULLY'],
+        '/user*':        ['IS_AUTHENTICATED_ANONYMOUSLY'],
+        '/login*':        ['IS_AUTHENTICATED_ANONYMOUSLY'],
+        '/logout*':       ['IS_AUTHENTICATED_ANONYMOUSLY']
 
+]
+/***********************************************************************/
 // URL Mapping Cache Max Size, defaults to 5000
 //grails.urlmapping.cache.maxsize = 1000
 
@@ -88,9 +103,30 @@ grails.hibernate.osiv.readonly = false
 environments {
     development {
         grails.logging.jul.usebridge = true
+        grails.plugins.airbrake.enabled = false
     }
+
+    staging{
+        log4j = {
+            error  'org.codehaus.groovy.grails.web.servlet',        // controllers
+                    'org.codehaus.groovy.grails.web.pages',          // GSP
+                    'org.codehaus.groovy.grails.web.sitemesh',       // layouts
+                    'org.codehaus.groovy.grails.web.mapping.filter', // URL mapping
+                    'org.codehaus.groovy.grails.web.mapping',        // URL mapping
+                    'org.codehaus.groovy.grails.commons',            // core / classloading
+                    'org.codehaus.groovy.grails.plugins',            // plugins
+                    'org.codehaus.groovy.grails.orm.hibernate',      // hibernate integration
+                    'org.springframework',
+                    'org.hibernate',
+                    'net.sf.ehcache.hibernate'
+        }
+
+        grails.plugins.airbrake.enabled = true
+    }
+
     production {
         grails.logging.jul.usebridge = false
+        grails.plugins.airbrake.enabled = true
         // TODO: grails.serverURL = "http://www.changeme.com"
     }
 }
@@ -115,3 +151,38 @@ log4j.main = {
            'org.hibernate',
            'net.sf.ehcache.hibernate'
 }
+
+// Spring Security Core Plugin
+grails.plugin.springsecurity.authority.classname = 'com.timeshots.blacklabel.socialnetwork.security.Role'
+grails.plugin.springsecurity.securityConfigType = 'Annotation'
+
+grails.plugin.springsecurity.rest.token.storage.useGorm = true
+
+grails{
+    plugin{
+        springsecurity{
+            filterChain{
+                chainMap = [
+                    '/login/**' : 'anonymousAuthenticationFilter'
+                ]
+            }
+            rest{
+                token{
+                    validation{
+                        enabledAnonymousAccess = true
+                    }
+                }
+            }
+        }
+    }
+}
+
+grails.resources.modules = {
+    core {
+        dependsOn 'jquery, jquery-ui'
+    }
+}
+
+grails.plugin.springsecurity.controllerAnnotations.staticRules = [
+        '/**': ['IS_AUTHENTICATED_ANONYMOUSLY']
+]
