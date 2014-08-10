@@ -12,7 +12,10 @@
         <div class="container">
             <h2>Sign Up</h2>
             <h5>forever's free and always be.</h5><br/>
-            <form class="form-signin" role="form" controller="userRegistration" action="signup" method="POST" id="loginForm" autocomplete="off">
+            <form class="form-signin" role="form" controller="userRegistration" action="register" method="POST" id="loginForm" autocomplete="off">
+                <g:if test="${flash.message}">
+                    <div class="alert alert-danger">${flash.message}</div>
+                </g:if>
                 <div class="form-group">
                     <input type="text" class="form-control" id="exampleInputFirstName1" placeholder="First Name" name="firstName" required />
                     <input type="text" class="form-control" id="exampleInputLastName1" placeholder="Last Name" name="lastName" required />
@@ -52,7 +55,7 @@
                             <select class="form-control-year" name="birthday_year">
                                 <option value="0000">Year</option>
                                 <g:each var="i" in="${ (1900..<2015) }">
-                                    <option value="i">${i++}</option>
+                                    <option value="${i}">${i++}</option>
                                 </g:each>
                             </select>
                         </div>

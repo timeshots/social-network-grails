@@ -57,4 +57,14 @@ class User {
     protected void encodePassword() {
         password = springSecurityService.encodePassword(password)
     }
+
+    def boolean isCompletelyRegistered() {
+        boolean isCompletelyRegistered = false
+
+        if(firstName && lastName && username && emailAddress && password && gender && birthDate) {
+            isCompletelyRegistered = true
+        }
+
+        return isCompletelyRegistered
+    }
 }
