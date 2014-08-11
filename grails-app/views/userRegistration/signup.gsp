@@ -46,7 +46,7 @@
                         <div class="form-group">
                             <select class="form-control-date" name="birthday_date">
                                 <option value="00">Date</option>
-                                <g:each var="i" in="${ (1..<32) }">
+                                <g:each var="i" in="${(1..<32)}">
                                     <option value="${i}">${i++}</option>
                                 </g:each>
                             </select>
@@ -54,7 +54,7 @@
                         <div class="form-group">
                             <select class="form-control-year" name="birthday_year">
                                 <option value="0000">Year</option>
-                                <g:each var="i" in="${ (1900..<2015) }">
+                                <g:each var="i" in="${(1900..<2015)}">
                                     <option value="${i}">${i++}</option>
                                 </g:each>
                             </select>
