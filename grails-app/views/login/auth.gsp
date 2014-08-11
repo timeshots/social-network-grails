@@ -2,31 +2,28 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	    <title>Login Page</title>
+	    <title>Timeshots - Sign In</title>
         <r:require module="bootstrap"/>
         <r:layoutResources />
-		<link rel="stylesheet" href="${resource(dir: 'css/login', file: 'auth.css')}" type="text/css">
+        <link rel="icon" href="${resource(dir: 'images/timeshots', file: 'ts.ico')}">
+		<link rel="stylesheet" href="${resource(dir: 'css/login', file: 'signin.min.css')}" type="text/css">
+		<link rel="stylesheet" href="${resource(dir: 'css/login', file: 'signin.css')}" type="text/css">
 	</head>
 	<body>
         <div class="container">
-            <g:if test="${flash.message}">
-                <div class="alert alert-danger">${flash.message}</div>
-            </g:if>
+            <g:form class="form-signin" role="form" controller="Login" action="authenticate" method="POST" id="loginForm" autocomplete="off">
+                <g:if test="${flash.message}">
+                    <div class="alert alert-danger">${flash.message}</div>
+                </g:if>
 
-            <form class="form-signin" role="form" controller="Login" action="authenticate" method="POST" id="loginForm" autocomplete="off">
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Username :</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Username" name="username" />
-
-                    <label for="exampleInputPassword1">Password :</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password" />
-
-                    <div class="checkbox">
-                        <label><input type="checkbox">Check me out</label>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Sign in</button>
-                </div>
-            </form>
+                <h2 class="form-signin-heading">Please sign in</h2>
+                <input type="text" class="form-control" placeholder="Email address" name="username" required autofocus>
+                <input type="password" class="form-control" placeholder="Password" name="password" required>
+                <label class="checkbox">
+                    <input type="checkbox" value="remember-me"> Remember me
+                </label>
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+            </g:form>
         </div>
         <r:layoutResources />
     </body>

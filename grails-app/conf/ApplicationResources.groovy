@@ -17,6 +17,10 @@ modules = {
         resource url: '/js/jquery-2.1.1.min.js'
     }
 
+    imageHolderJS {
+        resource url: '/js/user-dashboard/holder.js'
+    }
+
     bootstrapMINJS {
         resource url: '/js/home/bootstrap.min.js'
     }

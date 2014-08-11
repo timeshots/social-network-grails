@@ -1,0 +1,21 @@
+<plugin name='fatcow-icons' version='0.1.0' grailsVersion='2.0 &gt; *'>
+  <author>Davide Cavestro</author>
+  <authorEmail>davide.cavestro@gmail.com</authorEmail>
+  <title>Fat Cow Icons Plugin</title>
+  <description>Bundles free icons from http://www.fatcow.com and provides a handful of convenient taglibs that create asynchronous buttons out of the icons.
+This plugin started as a clone of the grails-glyph-icons plugin with some adaptations.
+</description>
+  <documentation>https://github.com/davidecavestro/grails-fatcow-icons/wiki</documentation>
+  <type>FatcowIconsGrailsPlugin</type>
+  <resources>
+    <resource>fatcowicons.FatcowIconsPluginTagLib</resource>
+  </resources>
+  <repositories>
+    <repository name='grailsCentral' url='http://grails.org/plugins' />
+    <repository name='mavenCentral' url='http://repo1.maven.org/maven2/' />
+  </repositories>
+  <dependencies />
+  <plugins />
+  <runtimePluginRequirements />
+  <behavior />
+</plugin>
