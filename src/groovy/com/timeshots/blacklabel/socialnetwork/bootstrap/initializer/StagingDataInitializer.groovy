@@ -4,7 +4,11 @@ import com.timeshots.blacklabel.socialnetwork.Address
 import com.timeshots.blacklabel.socialnetwork.User
 import com.timeshots.blacklabel.socialnetwork.Contact
 import com.timeshots.blacklabel.socialnetwork.Profile
+import com.timeshots.blacklabel.socialnetwork.School
+import com.timeshots.blacklabel.socialnetwork.EducationalAttainment
 import com.timeshots.blacklabel.socialnetwork.security.Role
+import com.timeshots.blacklabel.socialnetwork.WorkPosition
+import com.timeshots.blacklabel.socialnetwork.WorkCompany
 
 class StagingDataInitializer implements BootstrapInitializerComponent{
 
@@ -25,13 +29,19 @@ class StagingDataInitializer implements BootstrapInitializerComponent{
         Contact contact2 = new Contact(emailAddress: 'redwolfgang21@no-spam.ws', phoneNumber: '335-4673', cellphoneNumber: '09105976373').save(flush: true, failonError: true)
         Contact contact3 = new Contact(emailAddress: 'redwolfgang22@no-spam.ws', phoneNumber: '335-4674', cellphoneNumber: '09106076374').save(flush: true, failonError: true)
 
+        School tertiarySchool = new School(schoolName: 'Guadalupe Elementary School', schoolAddress: 'Brgy Guadalupe Baybay City, Leyte (Eastern Visayas)').save(flush: true, failOnError: true)
+        School secondarySchool = new School(schoolName: 'Baybay National High School (BNHS)', schoolAddress: 'Baybay City, Leyte (Eastern Visayas)').save(flush: true, failOnError: true)
+        School primarySchool = new School(schoolName: 'Visayas State University (Main Campus)', schoolAddress: 'Brgy Visca Baybay City, 6521 Leyte (Eastern Visayas)').save(flush: true, failOnError: true)
+
         User larry = new User(firstName: 'Larry', lastName: 'Borrero', emailAddress: 'redwolfgang20@gmail.com', username: 'redwolfgang20', password: 'redwolfgang1990', gender: 'Male', birthDate: new Date(1990,05,11), hasConfirmedEmail: true, dateConfirmed: new Date(2014,06,11), role: roleAdmin).save(flush: true, failOnError: true)
         User lorina = new User(firstName: 'Lorina', lastName: 'Borrero', emailAddress: 'lorina@gmail.com', username: 'lorina', password: 'lorina_yhads', gender: 'Female', birthDate: new Date(1990,05,11), hasConfirmedEmail: true, dateConfirmed: new Date(2014,06,11), role: roleUser).save(flush: true, failOnError: true)
         User whitehot = new User(firstName: 'White', lastName: 'Hot', emailAddress: 'whitehot@gmail.com', username: 'white', password: 'whitehot', gender: 'Male', birthDate: new Date(1990,05,11), hasConfirmedEmail: true, dateConfirmed: new Date(2014,06,11), role: roleUser).save(flush: true, failOnError: true)
 
-        Profile profile1 = new Profile(interestedIn: 'Female', religion: 'Roman Catholic', civilStatus: 'Single', nationality: 'Pilipino', user: larry, address: add_one, contact: contact1).save(flush: true, failOnError: true)
-        Profile profile2 = new Profile(interestedIn: 'Male', religion: 'Roman Catholic', civilStatus: 'Single', nationality: 'Pilipino', user: lorina, address: add_two, contact: contact2).save(flush: true, failOnError: true)
-        Profile profile3 = new Profile(interestedIn: 'Female', religion: 'Roman Catholic', civilStatus: 'Married', nationality: 'Pilipino', user: whitehot, address: add_three, contact: contact3).save(flush: true, failOnError: true)
+        EducationalAttainment educationalAttainment1 = new EducationalAttainment(user:larry, tertiaryEducation:tertiarySchool, secondaryEducation:secondarySchool, primaryEducation:primarySchool).save(flush: true, failOnError: true)
+
+        Profile profile1 = new Profile(educationalAttainment:educationalAttainment1, interestedIn: 'Female', religion: 'Roman Catholic', civilStatus: 'Single', nationality: 'Pilipino', user: larry, contact: contact1).save(flush: true, failOnError: true)
+        Profile profile2 = new Profile(interestedIn: 'Male', religion: 'Roman Catholic', civilStatus: 'Single', nationality: 'Pilipino', user: lorina, contact: contact2).save(flush: true, failOnError: true)
+        Profile profile3 = new Profile(interestedIn: 'Female', religion: 'Roman Catholic', civilStatus: 'Married', nationality: 'Pilipino', user: whitehot, contact: contact3).save(flush: true, failOnError: true)
     }
 
     private void initializeWorkPosition(){

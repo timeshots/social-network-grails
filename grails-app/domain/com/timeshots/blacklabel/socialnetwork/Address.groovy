@@ -4,6 +4,7 @@ import groovy.transform.EqualsAndHashCode
 
 @EqualsAndHashCode
 class Address {
+
     String streetAddress
     String city
     String state

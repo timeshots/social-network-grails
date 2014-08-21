@@ -33,15 +33,15 @@ class DevelopmentDataInitializer implements BootstrapInitializerComponent{
         School secondarySchool = new School(schoolName: 'Baybay National High School (BNHS)', schoolAddress: 'Baybay City, Leyte (Eastern Visayas)').save(flush: true, failOnError: true)
         School primarySchool = new School(schoolName: 'Visayas State University (Main Campus)', schoolAddress: 'Brgy Visca Baybay City, 6521 Leyte (Eastern Visayas)').save(flush: true, failOnError: true)
 
-        EducationalAttainment educationalAttainment1 = new EducationalAttainment(tertiaryEducation:tertiarySchool, secondaryEducation:secondarySchool, primaryEducation:primarySchool).save(flush: true, failOnError: true)
-
         User larry = new User(firstName: 'Larry', lastName: 'Borrero', emailAddress: 'redwolfgang20@gmail.com', username: 'redwolfgang20', password: 'redwolfgang1990', gender: 'Male', birthDate: new Date(1990,05,11), hasConfirmedEmail: true, dateConfirmed: new Date(2014,06,11), role: roleAdmin).save(flush: true, failOnError: true)
         User lorina = new User(firstName: 'Lorina', lastName: 'Borrero', emailAddress: 'lorina@gmail.com', username: 'lorina', password: 'lorina_yhads', gender: 'Female', birthDate: new Date(1990,05,11), hasConfirmedEmail: true, dateConfirmed: new Date(2014,06,11), role: roleUser).save(flush: true, failOnError: true)
         User whitehot = new User(firstName: 'White', lastName: 'Hot', emailAddress: 'whitehot@gmail.com', username: 'white', password: 'whitehot', gender: 'Male', birthDate: new Date(1990,05,11), hasConfirmedEmail: true, dateConfirmed: new Date(2014,06,11), role: roleUser).save(flush: true, failOnError: true)
 
-        Profile profile1 = new Profile(educationalAttainment:educationalAttainment1, interestedIn: 'Female', religion: 'Roman Catholic', civilStatus: 'Single', nationality: 'Pilipino', user: larry, address: add_one, contact: contact1).save(flush: true, failOnError: true)
-        Profile profile2 = new Profile(interestedIn: 'Female', religion: 'Roman Catholic', civilStatus: 'Single', nationality: 'Pilipino', user: lorina, address: add_two, contact: contact2).save(flush: true, failOnError: true)
-        Profile profile3 = new Profile(interestedIn: 'Female', religion: 'Roman Catholic', civilStatus: 'Married', nationality: 'Pilipino', user: whitehot, address: add_three, contact: contact3).save(flush: true, failOnError: true)
+        EducationalAttainment educationalAttainment1 = new EducationalAttainment(user:larry, tertiaryEducation:tertiarySchool, secondaryEducation:secondarySchool, primaryEducation:primarySchool).save(flush: true, failOnError: true)
+
+        Profile profile1 = new Profile(educationalAttainment:educationalAttainment1, interestedIn: 'Female', religion: 'Roman Catholic', civilStatus: 'Single', nationality: 'Pilipino', user: larry, contact: contact1).save(flush: true, failOnError: true)
+        Profile profile2 = new Profile(interestedIn: 'Female', religion: 'Roman Catholic', civilStatus: 'Single', nationality: 'Pilipino', user: lorina, contact: contact2).save(flush: true, failOnError: true)
+        Profile profile3 = new Profile(interestedIn: 'Female', religion: 'Roman Catholic', civilStatus: 'Married', nationality: 'Pilipino', user: whitehot, contact: contact3).save(flush: true, failOnError: true)
     }
 
     private void initializeWorkPosition(){
