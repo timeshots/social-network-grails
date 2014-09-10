@@ -45,6 +45,9 @@ grails.plugin.springsecurity.interceptUrlMap = [
         '/logout*':       ['IS_AUTHENTICATED_ANONYMOUSLY']
 
 ]
+/*jodatime {
+    format.org.joda.time.DateTime = "dd MMM YYYY HH:mm a"
+}*/
 /***********************************************************************/
 // URL Mapping Cache Max Size, defaults to 5000
 //grails.urlmapping.cache.maxsize = 1000

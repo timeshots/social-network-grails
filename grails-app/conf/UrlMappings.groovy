@@ -7,6 +7,13 @@ class UrlMappings {
             }
         }
 
+        "/"(redirect: '/app/')
+
+        "/confirm?" {
+            controller = 'emailConfirmation'
+            action = "index"
+        }
+
         "/"(view:"/home/home")
         "500"(view:'/error')
 	}

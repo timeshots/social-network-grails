@@ -1,8 +1,13 @@
 package com.timeshots.blacklabel.socialnetwork
 
 import com.timeshots.blacklabel.socialnetwork.security.Role
+import org.codehaus.groovy.grails.web.json.JSONObject
+import org.springframework.http.HttpStatus
 
 class UserRegistrationController {
+
+    static responseFormats = ['json']
+    static allowedMethods = [checkUsernameDuplicate:"POST", checkEmailDuplicate: "POST", save: "POST"]
 
     UserRegistrationService userRegistrationService
 
