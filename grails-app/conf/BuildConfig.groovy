@@ -50,11 +50,11 @@ grails.project.dependency.resolution = {
     }
 
     dependencies {
-        /*compile 'com.amazonaws:aws-java-sdk:1.7.5'
+        compile 'com.amazonaws:aws-java-sdk:1.7.5'
         build 'org.apache.httpcomponents:httpcore:4.2'
         build 'org.apache.httpcomponents:httpclient:4.2'
         runtime 'org.apache.httpcomponents:httpcore:4.2'
-        runtime 'org.apache.httpcomponents:httpclient:4.2'*/
+        runtime 'org.apache.httpcomponents:httpclient:4.2'
         //test "org.seleniumhq.selenium:selenium-chrome-driver:$seleniumVersion"
         //test('org.seleniumhq.selenium:selenium-firefox-driver:$seleniumVersion')
         //test "org.gebish:geb-spock:$gebVersion"
