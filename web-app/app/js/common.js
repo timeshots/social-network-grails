@@ -1,5 +1,9 @@
 $(document).ready(function () {
     // chicken and egg switcher
+    $(document).on('click', '.dropdown-toggle', function() {
+        $(this).parent('li').addClass('open');
+    });
+
     $(".chicken-btn").click(function() {
         $( ".egg" ).hide( "normal", function() {
             $(".chicken").fadeIn();
@@ -55,5 +59,4 @@ $(document).ready(function () {
         }
         return false;
     });
-
 });
