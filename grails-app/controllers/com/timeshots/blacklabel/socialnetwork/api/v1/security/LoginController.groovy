@@ -2,25 +2,28 @@ package com.timeshots.blacklabel.socialnetwork.api.v1.security
 
 import com.timeshots.blacklabel.socialnetwork.User
 import org.springframework.security.authentication.encoding.PasswordEncoder
+import org.springframework.http.HttpStatus
 
 class LoginController {
+
+    static responseFormats = ['json']
+    static allowedMethods = [authenticate: "POST"]
 
     PasswordEncoder passwordEncoder
     User user
 
     def authenticate(){
-
+        String username = request?.JSON?.username?.trim()
+        String password = request?.JSON?.password?.trim()
         String message
-        String username = params?.username
-        String password = params?.password
 
         if(!username || !password){
             message = "Missing username or password"
         }
 
         if(message){
-            flash.message = message
-            redirect(action: 'auth')
+            response.status = HttpStatus.UNAUTHORIZED.value()
+            respond ([message: message])
             return
         }
 
@@ -31,8 +34,8 @@ class LoginController {
         }
 
         if(!user){
-            flash.message = "Unregistered user"
-            redirect(action: 'auth')
+            response.status = HttpStatus.UNAUTHORIZED.value()
+            respond ([message: "Unregistered user."])
             return
         }
 
@@ -43,15 +46,13 @@ class LoginController {
         }
 
         if(!message){
-            flash.message = "Login succeed"
-            redirect(controller: "user", action: 'dashboard')
+            response.status = HttpStatus.OK.value()
+            respond ([message: "Successfully login."])
             return
         }else{
-            flash.message = message
-            redirect(action: 'auth')
+            response.status = HttpStatus.UNAUTHORIZED.value()
+            respond ([message: message])
             return
         }
     }
-
-    def auth(){}
 }
